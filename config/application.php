@@ -64,6 +64,18 @@ define('SECURE_AUTH_SALT', env('SECURE_AUTH_SALT'));
 define('LOGGED_IN_SALT', env('LOGGED_IN_SALT'));
 define('NONCE_SALT', env('NONCE_SALT'));
 
+/*
+ * Multi site
+ */
+define('WP_ALLOW_MULTISITE', true);
+define('MULTISITE', true);
+define('SUBDOMAIN_INSTALL', false);
+$base = '/';
+define('DOMAIN_CURRENT_SITE', env('DOMAIN_CURRENT_SITE') ?: 'localhost');
+define('PATH_CURRENT_SITE', '/');
+define('SITE_ID_CURRENT_SITE', 1);
+define('BLOG_ID_CURRENT_SITE', 1);/* That's all, stop editing!
+
 /**
  * Custom Settings
  */
