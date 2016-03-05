@@ -1,18 +1,43 @@
 sudo: false
 language: php
 php:
-  - nightly
+  - 7.0
   - 5.6
-  - 5.5
-  - 5.4
+  - hhvm
 
 matrix:
   allow_failures:
-    - php: nightly
+    - php: hhvm
+  fast_finish: true
 
 before_install:
   - pyrus install pear/PHP_CodeSniffer
   - phpenv rehash
 
+before_script:
+  - composer install
+  - curl -s https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar > wp
+  - chmod +x wp
+  - mysql --execute="CREATE DATABASE IF NOT EXISTS infopub" --user="root" --password=""
+  - cp config/travis-wp-tests-config.php wp-tests-config.php
+  - cp config/travis.env .env
+  - ./wp core multisite-install --url='http://localhost' --title='Newsflow' --admin_user='admin' --admin_password='admin' --admin_email='noreply@none.se'
+  - ./wp rewrite flush
+  - ./wp rewrite structure '/%postname%/'
+  - ./wp plugin activate bladerunner
+  - ./wp theme activate infopub
+  - mkdir -p web/app/uploads/.cache
+  - chmod -R 777 web/app/uploads/.cache
+  - svn co http://develop.svn.wordpress.org/trunk/tests/phpunit/includes/
+
 script:
   - phpcs --standard=ruleset.xml --extensions=php --ignore=web/wp/,vendor/ -n -s .
+  - phpunit
+
+after_success:
+  - ./wp forge build
+
+notifications:
+  on_success: never
+  on_failure: never
+  slack: aekab:gOI1DOsi1a1zp8Ogn6g1Pciq
