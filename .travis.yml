@@ -11,7 +11,6 @@ matrix:
   fast_finish: true
 
 before_install:
-  - pyrus install pear/PHP_CodeSniffer
   - phpenv rehash
 
 before_script:
@@ -31,7 +30,6 @@ before_script:
   - svn co http://develop.svn.wordpress.org/trunk/tests/phpunit/includes/
 
 script:
-  - phpcs --standard=ruleset.xml --extensions=php --ignore=web/wp/,vendor/ -n -s .
   - phpunit
 
 after_success:
