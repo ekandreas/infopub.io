@@ -32,5 +32,17 @@
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
     "wordpress-install-dir": "web/wp"
+  },
+  "require-dev": {
+    "ekandreas/docker-bedrock": "*",
+    "ekandreas/dipwpe": "*"
+  },
+  "autoload":{
+    "psr-4": {
+      "Infopub\\": "web/app/themes/infopub/src/"
+    },
+    "files": [
+      "vendor/johnbillion/extended-cpts/extended-cpts.php"
+    ]    
   }
 }

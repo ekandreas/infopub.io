@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0f8e75e69326daa89a0020e26fe0d535",
-    "content-hash": "e3058373c38b74c2d23237c375c25857",
+    "hash": "fc01d6b799c3127178562b569b93df78",
+    "content-hash": "60e02c60b399a25f4294705f9f3bdc8a",
     "packages": [
         {
             "name": "composer/installers",
@@ -1869,7 +1869,66 @@
             "time": "2016-02-15 09:34:45"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "ekandreas/dipwpe",
+            "version": "0.4.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ekandreas/dipwpe.git",
+                "reference": "66abae0f45ffaf2bc67b8feb96cb7b0fea8f1885"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ekandreas/dipwpe/zipball/66abae0f45ffaf2bc67b8feb96cb7b0fea8f1885",
+                "reference": "66abae0f45ffaf2bc67b8feb96cb7b0fea8f1885",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Deployment recipe",
+            "time": "2016-01-15 17:37:52"
+        },
+        {
+            "name": "ekandreas/docker-bedrock",
+            "version": "0.8.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ekandreas/docker-bedrock.git",
+                "reference": "22d117c146c5d70e15da5ad631bf6b61c889783d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ekandreas/docker-bedrock/zipball/22d117c146c5d70e15da5ad631bf6b61c889783d",
+                "reference": "22d117c146c5d70e15da5ad631bf6b61c889783d",
+                "shasum": ""
+            },
+            "require": {
+                "vlucas/phpdotenv": "~2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "EkAndreas\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Ek",
+                    "email": "andreas@aekab.se"
+                }
+            ],
+            "description": "Docker environment for Roots Bedrock projects",
+            "time": "2016-02-20 19:03:39"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
