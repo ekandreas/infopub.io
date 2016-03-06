@@ -1,1 +1,2 @@
-INFOPUB
+<?php
+	bladerunner('views.pages.index');

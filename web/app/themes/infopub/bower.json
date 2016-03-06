@@ -1,0 +1,24 @@
+{
+  "name": "infopub",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Andreas Ek <andreas@andreasek.se>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ekandreas/infopub.io",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "*",
+    "semantic-ui": "*",
+    "jquery": "*",
+    "vue": "*"
+  }
+}

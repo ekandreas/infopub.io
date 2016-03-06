@@ -30,3 +30,4 @@ node_modules
 bin
 .vagrant
 includes
+web/app/themes/infopub/bower_components
