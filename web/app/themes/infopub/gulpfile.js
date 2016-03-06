@@ -25,6 +25,6 @@ elixir(function(mix) {
         './bower_components/sematic-ui/dist/themes/default/assets/fonts/*.*',
     	], 'dist/fonts');
 
-    mix.copy('./assets/img', 'dist/img');
+    mix.copy('./assets/images', 'dist/images');
 
 });
