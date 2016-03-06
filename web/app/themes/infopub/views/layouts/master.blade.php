@@ -2,6 +2,7 @@
 <html>
 	@include('views.parts.head')
 	<body {{ body_class() }}>
+		@include('views.parts.ga')
 
 
 
